@@ -1,4 +1,4 @@
-package com.zachary.sperske.commute;
+package com.zachary.sperske.machone;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

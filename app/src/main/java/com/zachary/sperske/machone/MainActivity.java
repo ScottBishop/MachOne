@@ -1,4 +1,4 @@
-package com.zachary.sperske.commute;
+package com.zachary.sperske.machone;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,8 +7,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.media.AudioManager;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Switch;

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Commute</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="enable">Enable</string>
+    <string name="info">Adjust this bar to set the minimum volume level</string>
+    <string name="max_speed_info">Adjust this bar to set the speed at which max volume will be achieved.</string>
+
+</resources>

@@ -11,49 +11,132 @@
     android:background="#eaeaea"
     tools:context=".MainActivity">
 
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/enable"
-        android:id="@+id/enableSwitch"
-        android:paddingBottom="16dp" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/info"
-        android:paddingBottom="16dp"/>
+        android:paddingBottom="16dp"
+        android:text="@string/speed_text" />
 
-    <SeekBar
-        android:layout_width="250dp"
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <SeekBar
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/movementTypeBar" />
+
+            <ImageView
+                android:id="@+id/walking"
+                android:layout_alignLeft="@id/movementTypeBar"
+                android:layout_below="@id/movementTypeBar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/walking"/>
+
+            <ImageView
+                android:id="@+id/running"
+                android:layout_toRightOf="@id/walking"
+                android:layout_below="@id/movementTypeBar"
+                android:layout_marginLeft="36dp"
+                android:layout_marginRight="36dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/running"/>
+
+            <ImageView
+                android:id="@+id/biking"
+                android:layout_toRightOf="@id/running"
+                android:layout_below="@id/movementTypeBar"
+                android:layout_marginRight="36dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/biking"/>
+
+            <ImageView
+                android:id="@+id/car"
+                android:layout_alignRight="@id/movementTypeBar"
+                android:layout_below="@id/movementTypeBar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/car"/>
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/customCheck"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/volumeBar" />
+        android:text="@string/custom"/>
+
+    <LinearLayout
+        android:id="@+id/customContainer"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="@string/max_speed_info"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"/>
+
+        <SeekBar
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/maxSpeedBar" />
+
+        <TextView
+            android:id="@+id/maxSpeedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volume_info"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"/>
+
+        <SeekBar
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/volumeBar" />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:text="Your speed is: "
         android:paddingBottom="16dp"
-        android:id="@+id/textView" />
+        android:id="@+id/currentSpeed" />
 
     <TextView
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="@string/max_speed_info"
-        android:paddingBottom="16dp"/>
-
-    <SeekBar
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/maxSpeedBar" />
-
-    <TextView
-        android:id="@+id/maxSpeedText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="16dp"
         android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:text="Your position is: "
+        android:paddingBottom="16dp"
+        android:id="@+id/currentPosition" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Your fastest speed was: "
+        android:paddingBottom="16dp"
+        android:id="@+id/fastestSpeedText" />
 
 </LinearLayout>
